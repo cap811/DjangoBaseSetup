@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for article in articles %}
+    <div class="container" style="padding: 1em;">     
+            <h2> <a href="{{ article.id }}" style="text-decoration: none;">{{ article.title }}</a></h2>
+    </div>
+    {% endfor %}
+{% endblock content %}
+

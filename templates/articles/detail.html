@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+<!--  Article in details -->
+{% block content %}
+    <div class="container">
+        <div class="article">
+            <h2>
+                {{ article.title }}
+            </h2>
+            <p>
+                {{ article.body }}
+            </p>
+            <p>
+                {{ article.author }}
+            </p>
+            <p>
+                {{ article.date }}
+            </p>
+        </div>
+    </div>
+{% endblock content %}
