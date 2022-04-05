@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Article model
-
 class Article(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
@@ -10,9 +9,11 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='articles')
 
+    # Return article title
     def __str__(self):
         return self.title
 
+    # Meta definition for ordering the objects in the admin interface by date (descending)
     def Meta(self):
         ordering = ['-date']
 
